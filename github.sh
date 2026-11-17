@@ -12,7 +12,7 @@
 #   ETAT: A_CONNECTER   pas encore connecté (avec --etat)
 #   ETAT: ERREUR <raison>
 set -u
-DEPOT="theoprs812/editeur"
+DEPOT="project-orange-dashboard/editeur"
 BIN="$HOME/.local/bin"
 export PATH="$BIN:/opt/homebrew/bin:/usr/local/bin:$PATH"
 ETAT_SEUL=0; [[ "${1:-}" == "--etat" ]] && ETAT_SEUL=1

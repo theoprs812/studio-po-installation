@@ -19,7 +19,7 @@ if [[ -d "$DOSSIER/.git" ]]; then
   git -C "$DOSSIER" pull --ff-only --quiet && echo "Studio déjà là, mis à jour."
 else
   [[ -d "$DOSSIER" ]] && mv "$DOSSIER" "$DOSSIER.ancien-$(date +%s)"
-  gh repo clone theoprs812/editeur "$DOSSIER" -- --quiet || { echo "ETAT: ERREUR téléchargement du Studio"; exit 1; }
+  gh repo clone project-orange-dashboard/editeur "$DOSSIER" -- --quiet || { echo "ETAT: ERREUR téléchargement du Studio"; exit 1; }
   echo "Studio téléchargé dans ~/.editeur."
 fi
 

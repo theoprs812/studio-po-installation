@@ -15,7 +15,7 @@ if (-not (Get-Command git -ErrorAction SilentlyContinue)) { winget install --id 
 if (Test-Path (Join-Path $Dossier ".git")) { git -C $Dossier pull --ff-only --quiet; Write-Host "Studio déjà là, mis à jour." }
 else {
   if (Test-Path $Dossier) { Rename-Item $Dossier "$Dossier.ancien-$(Get-Date -Format yyyyMMddHHmmss)" }
-  gh repo clone theoprs812/editeur $Dossier -- --quiet
+  gh repo clone project-orange-dashboard/editeur $Dossier -- --quiet
   if ($LASTEXITCODE -ne 0) { Write-Host "ETAT: ERREUR téléchargement du Studio"; exit 1 }
   Write-Host "Studio téléchargé dans .editeur."
 }

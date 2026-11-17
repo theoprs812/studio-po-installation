@@ -2,7 +2,7 @@
 #   powershell -NoProfile -ExecutionPolicy Bypass -File github.ps1 [--etat]
 # Mêmes lignes « ETAT: ... » que github.sh : OK, CODE XXXX-XXXX, INVITATION, A_CONNECTER, ERREUR <raison>.
 $EtatSeul = $args -contains "--etat"
-$Depot = "theoprs812/editeur"
+$Depot = "project-orange-dashboard/editeur"
 $Bin = Join-Path $env:USERPROFILE ".local\bin"
 $env:Path = "$Bin;$env:ProgramFiles\GitHub CLI;$env:Path"
 function A($c) { [bool](Get-Command $c -ErrorAction SilentlyContinue) }
